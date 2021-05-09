@@ -1,8 +1,8 @@
 ; For Heat_tower_190-240_Bridge.stl
-; Reduce temperature every 5mm (20 layers for 0.25mm layer height). Start from 260C, not the stl file says 240C. My nozzle is 0.6mm and requires higher temerature.
+; Reduce temperature every 5mm (20 layers for 0.25mm layer height). Start from 250C, not the stl file says 240C. Higher temperature for PETG. Notice most 3D printers support up to 260C. 
 ; Set layer height to 0.25mm. If larger, some bridges are skipped.
 ; Below varibles are for PrusaSlicer. You need to find their equivalant for other slicers like Cura.
 ; layer_z is heigh in mm, not layer sequence index 1, 2, 3 etc. Layer 0's layer_z is 0.25mm, layer 1's is 0.5mm... layer 19's is 5mm.
 ; Current layer_z: {layer_z}
 ; Current: int(((layer_z-0.25) / 5)): {int(((layer_z-0.25) / 5))}
-M104 S{260 - (5 * int( ((layer_z-0.25) / 5) ))}
+M104 S{250 - (5 * int( ((layer_z-0.25) / 5) ))}
